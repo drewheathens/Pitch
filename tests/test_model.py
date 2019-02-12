@@ -1,6 +1,6 @@
-cd .from datetime import datetime, timedelta
+# from datetime import datetime, timedelta
 import unittest
-from .app import db
+from .app import *
 from app.models import User, Pitch
 
 class UserModelCase(unittest.TestCase):
