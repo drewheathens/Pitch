@@ -1,19 +1,19 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField,TextAreaField, PasswordField, BooleanField, SubmitField
-from wtforms.validators import ValidationError, DataRequired,Length, Email, EqualTo
+from wtforms.validators import ValidationError, Required,Length, Email, EqualTo
 from app.models import User
 
 class Login(FlaskForm):
-    username = StringField('Username', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
+    username = StringField('Username', validators=[Required()])
+    password = PasswordField('Password', validators=[Required()])
     submit = SubmitField('Sign In')
 
 
 class Registration(FlaskForm):
-    username = StringField('Username', validators=[DataRequired()])
-    email = StringField('Email', validators=[DataRequired(), Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    password_confirm = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
+    username = StringField('Username', validators=[Required()])
+    email = StringField('Email', validators=[Required(), Email()])
+    password = PasswordField('Password', validators=[Required()])
+    password_confirm = PasswordField('Confirm Password', validators=[Required(), EqualTo('password')])
     submit = SubmitField('Sign Up')
 
     def validate_email(self, email):
@@ -22,17 +22,17 @@ class Registration(FlaskForm):
             raise ValidationError('Email already exists')
 
     '''
-    the method above issue database queries expecting there 
+    the method above issue database queries expecting there
     will be no results. In the event a result already exists,
     a validation error is triggered by raising ValidationError
     '''
 
 class ResetPasswordRequest(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email()])
+    email = StringField('Email', validators=[Required(), Email()])
     submit = SubmitField('Request Password Reset')
 
 class ResetPassword(FlaskForm):
-    password = PasswordField('Password', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[Required()])
     password2 = PasswordField(
-        'Repeat Password', validators=[DataRequired(), EqualTo('password')])
+        'Repeat Password', validators=[Required(), EqualTo('password')])
     submit = SubmitField('Request Password Reset')
