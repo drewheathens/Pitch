@@ -22,7 +22,7 @@ class Registration(FlaskForm):
             raise ValidationError('Email already exists')
 
     '''
-    the method above issue database queries expecting there 
+    the method above issue database queries expecting there
     will be no results. In the event a result already exists,
     a validation error is triggered by raising ValidationError
     '''
