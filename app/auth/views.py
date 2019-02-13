@@ -3,7 +3,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User
 from werkzeug.urls import url_parse
 from . import auth
-from .form import Login,Registration,ResetPasswordRequest
+from .form import Login, Registration,ResetPasswordRequest
 from app import db
 from datetime import datetime
 from app.email import *
@@ -65,7 +65,7 @@ def login():
         if not next_page or url_parse(next_page).netloc!= '':
             next_page = url_for('main.index')
         return redirect(next_page)
-    return render_template('auth/login.html', title='Sig In', form = form)
+    return render_template('auth/login.html', title='Sign In', form = form)
     '''
     First step is to load the user from the db,then query
     the db with the log in username to find the user.
@@ -104,11 +104,7 @@ def user_profile(username):
         }
     ]
     return render_template('profile/user_profile.html',posts=posts, user=user)
-    '''
-    i have used a variant of first() called fist_or_404()
-    which works exactly like first() when there are results, and in case there
-    are no results it auto sends a 404 error back
-    '''
+
 
 @auth.route('/edit_profile', methods=['GET','POST'])
 @login_required
