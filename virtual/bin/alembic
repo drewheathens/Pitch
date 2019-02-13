@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/home/evans/Desktop/core/python/Pitch/virtual/bin/python2
+=======
+#!/home/evans/Desktop/core/Pitch/virtual/bin/python2
+>>>>>>> 0d40a78dc1505fb4a4dcabc5ff2491f48afa6777
 # -*- coding: utf-8 -*-
 import re
 import sys

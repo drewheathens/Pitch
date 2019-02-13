@@ -36,7 +36,11 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
+<<<<<<< HEAD
 set -gx VIRTUAL_ENV "/home/evans/Desktop/core/python/Pitch/virtual"
+=======
+set -gx VIRTUAL_ENV "/home/evans/Desktop/core/Pitch/virtual"
+>>>>>>> 0d40a78dc1505fb4a4dcabc5ff2491f48afa6777
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

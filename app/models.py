@@ -56,7 +56,11 @@ class User(UserMixin, db.Model):
 
     @classmethod
     def get_user(cls, id):
+<<<<<<< HEAD
         users = User.query.filter_by(user_id = id).all()
+=======
+        users = User.query.filter_by(User.id = id).all()
+>>>>>>> 0d40a78dc1505fb4a4dcabc5ff2491f48afa6777
         return users
 
 
@@ -70,7 +74,11 @@ class Pitch(db.Model):
 
     @classmethod
     def retrieve_posts(cls, id):
+<<<<<<< HEAD
         pitch = Pitch.filter_by(id=id).all()
+=======
+        pitch = Pitch.query.filter_by(id=id).all()
+>>>>>>> 0d40a78dc1505fb4a4dcabc5ff2491f48afa6777
         return pitch
 
     '''
@@ -87,7 +95,10 @@ class Pitch(db.Model):
 
 
 class Comments(db.Model):
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0d40a78dc1505fb4a4dcabc5ff2491f48afa6777
     __tablename__ = 'comments'
     id = db.Column(db.Integer, primary_key=True)
     details = db.Column(db.String(255))

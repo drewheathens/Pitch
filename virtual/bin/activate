@@ -40,7 +40,11 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 VIRTUAL_ENV="/home/evans/Desktop/core/python/Pitch/virtual"
+=======
+VIRTUAL_ENV="/home/evans/Desktop/core/Pitch/virtual"
+>>>>>>> 0d40a78dc1505fb4a4dcabc5ff2491f48afa6777
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

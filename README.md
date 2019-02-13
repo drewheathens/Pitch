@@ -1,23 +1,28 @@
 # PITCH
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 0d40a78dc1505fb4a4dcabc5ff2491f48afa6777
  An application that allows users to use that one minute wisely. The users will submit their one minute pitches and other users will vote on them and leave comments to give their feedback on them.
  
  ## DESCRIPTION
  
  Receive welcoming email after signing up.
  User can view, comment, upvote or downvote pitches posted by other users.
- User can view different categories and submit to own preference of category. 
- 
+ User can view different categories and submit to own preference of category.
+
 ## TECHNOLOGIES USED
 
     - Python 3.6
     - Flask Framework
     - HTML, CSS and Bootstrap
     - JavaScript
-    
+
 ## PROJECT STATUS
 
 The project is still under development.
+<<<<<<< HEAD
    
    
  ## INSTALLATION
@@ -29,6 +34,18 @@ The project is still under development.
     6. Run chmod a+x start.sh
     7. Run ./start.sh
     8. Access the application through `localhost:5000`
+=======
+
+ ## INSTALLATION
+
+    1. Clone or download the Repo
+    2. Create a virtual environment
+    3. Read the specs and requirements files and Install all the requirements.
+    4. Edit the start.sh file with your email account and password
+    5. Run chmod a+x start.py
+    6. Run ./start.py
+    7. Access the application through `localhost:5000`
+>>>>>>> 0d40a78dc1505fb4a4dcabc5ff2491f48afa6777
 
 
 ## License

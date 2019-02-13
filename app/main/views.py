@@ -3,7 +3,12 @@ from . import main
 from flask_login import login_required,current_user
 from app.models import User,Pitch,Comments
 from datetime import datetime
+<<<<<<< HEAD
 from .forms import Post,Comment
+=======
+from app import db, photos
+from .forms import PostForm,CommentForm
+>>>>>>> 0d40a78dc1505fb4a4dcabc5ff2491f48afa6777
 
 @main.before_request
 def before_request():
@@ -12,6 +17,7 @@ def before_request():
         db.session.commit()
 
 @main.route('/')
+<<<<<<< HEAD
 # @login_required
 def index():
 
@@ -20,6 +26,12 @@ def index():
 
     #'test': TestConfig
 
+=======
+def index():
+
+    title = 'Welcome to woo'
+'test':TestConfig
+>>>>>>> 0d40a78dc1505fb4a4dcabc5ff2491f48afa6777
     posts = [
     {
         'author': {'username': 'John'},
@@ -204,4 +216,8 @@ def user_profile(username):
             'author':user, 'body':'test Post#1'
         }
     ]
+<<<<<<< HEAD
     return render_template('profile/user_profile.html',posts=posts, user=user)
+=======
+    return render_template('profile/user_profile.html',posts=posts, user=u
+>>>>>>> 0d40a78dc1505fb4a4dcabc5ff2491f48afa6777
